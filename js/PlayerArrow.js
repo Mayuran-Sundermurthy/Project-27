@@ -73,4 +73,10 @@ class PlayerArrow {
     //   ellipse(this.trajectory[i][0], this.trajectory[i][1], 5, 5);
     // }
   }
+
+  remove(index){
+    this.isRemoved = true;
+    Matter.World.remove(world,this.body);
+    delete playerArrows[index];
+  }
 }

@@ -58,8 +58,8 @@ function draw() {
   for (var i = 0; i < playerArrows.length; i++) {
     if (playerArrows[i] !== undefined) {
       playerArrows[i].display();
-      var board1Collision = Matter.Sat.collides(board1.body,playerArrows[i].body);
-      var board2Collision = Matter.Sat.collides(board2.body,playerArrows[i].body);
+      var board1Collision = Matter.SAT.collides(board1.body,playerArrows[i].body);
+      var board2Collision = Matter.SAT.collides(board2.body,playerArrows[i].body);
       //[optional code to add trajectory of arrow]
       if(board1Collision.collided || board2Collision.collided){
         console.log("Collided");
